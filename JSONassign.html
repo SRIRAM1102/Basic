@@ -1,0 +1,24 @@
+<html>
+<head>
+<body>
+</body>
+<script>
+
+var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://restcountries.eu/rest/v2/all");
+        xhr.onload = function () {
+          var data = JSON.parse(this.response);
+          console.log(data);
+		  console.log("Below displays the flag of the countries in api");
+          for(var i in data)
+			{
+               console.log(data[i].flag);
+			}		  
+        };
+	
+      var y=xhr.send();
+	
+		
+</script>
+</head>
+</html>

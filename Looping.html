@@ -1,0 +1,39 @@
+<html>
+<head>
+<body>
+</body>
+<script>
+
+var obj = [
+          { person: "Name 1", age: "2", company: "GUVI" },
+          { person: "Name 2", age: "5", company: "GUVI geek" },
+          { person: "Name 3", age: "8", company: "GUVI geek network" },
+        ]
+    
+  ///For loop...........      
+    for(var i=0;i<obj.length;i++)
+    {
+        console.log(obj[i]);
+    }
+ ///For in loop.........    
+    for(var j in obj)
+    {
+        console.log(obj[j]);
+    }
+    
+
+   var obj1= [ "person", "Name 1", "age", "2", "company", "GUVI" ];
+ ///For each loop......
+obj1.forEach(element => 
+console.log(element));
+
+ ///For of loop........
+for(var k of obj1)
+{
+    console.log(k);
+}
+	
+		
+</script>
+</head>
+</html>
