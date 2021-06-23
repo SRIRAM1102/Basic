@@ -1,0 +1,246 @@
+
+var x=function (b){
+    for(var i in b)
+{
+   if(b[i]%2!==0)
+    {
+        console.log(b[i]);
+    }
+}    
+}
+x([1,2,3,4,5]);
+
+(function(d) {
+  for(var j in d){
+   if(d[j]%2!==0)
+    {
+        console.log(d[j]);
+    }
+    }
+})
+([1,2,3,4,5]);
+//.....................
+
+var sum=0;
+var x=function (b){
+    for(var i in b)
+{
+   sum+=b[i];
+}    
+console.log(sum);
+}
+x([1,2,3,4,5]);
+
+var sum1=0;
+(function(d) {
+    for(var i in d)
+{
+   sum1+=d[i];
+}    
+console.log(sum1);
+})
+([1,2,3,4,5]);
+/......................
+var flag=0;
+var x=function (b){
+    for(var i=0;i<b.length;i++)
+ {
+     
+    
+   for(var j=2;j<b[i];j++)
+   {
+       
+       if(b[i]%j===0)
+       {
+           flag=1;
+       }
+   }
+ 
+   if(flag===0||b[i]==1)
+   {
+      console.log(b[i]); 
+   }
+ }   
+}
+x([7,13,14]);
+
+var flag=0;
+(function(b) {
+      for(var i=0;i<b.length;i++)
+ {
+     
+    
+   for(var j=2;j<b[i];j++)
+   {
+       
+       if(b[i]%j===0)
+       {
+           flag=1;
+       }
+   }
+ 
+   if(flag===0||b[i]==1)
+   {
+      console.log(b[i]); 
+   }
+ }   
+})
+([7,13,14]);
+
+/....................
+
+var x=function (b){
+   let uniqueArr = [];
+    for(let i of b) {
+        if(uniqueArr.indexOf(i) === -1) {
+            uniqueArr.push(i);
+        }
+    }
+    console.log(uniqueArr);
+}
+([7,13,14,11,13,17]);
+
+(function(b) {
+   let uniqueArr = [];
+    for(let i of b) {
+        if(uniqueArr.indexOf(i) === -1) {
+            uniqueArr.push(i);
+        }
+    }
+    console.log(uniqueArr);
+
+})
+([7,13,14,11,13,17]);
+//.................
+var x=function (b,c){
+    for(var i=1;i<=c;i++)
+    {
+let last = b.pop();
+    b.unshift(last);
+    }
+    console.log(b);
+}
+([7,13,14,11,13,17],2);
+
+(function(b,c) {
+    for(var i=1;i<=c;i++)
+    {
+let last = b.pop();
+    b.unshift(last);
+    }
+    console.log(b);
+})
+([7,13,14,11,13,17],2)
+
+/...................
+var d=[];
+var x=function (b,c){
+    for(var i=0;i<b.length&&c.length;i++)
+    {
+        d.push(b[i]);
+         d.push(c[i]);
+    }
+  d.sort();
+  console.log(d[d.length/2])
+}
+
+([1,2,3,4,5],[6,7,8,9,10]);
+
+var d=[];
+(function(b,c) {
+    for(var i=0;i<b.length&&c.length;i++)
+    {
+        d.push(b[i]);
+         d.push(c[i]);
+    }
+  d.sort();
+  console.log(d[d.length/2])
+})
+([1,2,3,4,5],[6,7,8,9,10]);
+
+
+/.......................
+var x=function (b){
+  var c=b.split(" ");
+  for(var i=0;i<c.length;i++)
+  {
+     c[i]=c[i].charAt(0).toUpperCase()+c[i].slice(1);
+  }
+ 
+  console.log(c);
+}
+("my name is sriram")
+
+
+(function(b) {
+  var c=b.split(" ");
+  for(var i=0;i<c.length;i++)
+  {
+     c[i]=c[i].charAt(0).toUpperCase()+c[i].slice(1);
+  }
+ 
+  console.log(c);
+  
+})
+("my name is sriram");
+/..............Arrow func
+
+var a=(b)=>{
+
+for(var i=0;i<b.length;i++)
+ {
+     var flag=0;
+     
+       for(var j=2;j<b[i];j++)
+        {
+       
+       if(b[i]%j===0)
+       {
+           flag=1;
+       }
+   }
+ 
+   if(flag===0||b[i]==1)
+   {
+      console.log(b[i]); 
+   }
+ }   
+}
+a([7,13,14]);
+/.....................
+
+var a=(b)=>{
+for(var i in b)
+{
+   if(b[i]%2!==0)
+    {
+        console.log(b[i]);
+    }
+}    
+}
+a([1,2,3,4,5]);
+/................
+
+var a=(b)=>{
+
+var sum=0;
+
+  for(var i in b)
+    {
+      sum+=b[i];
+    }    
+console.log(sum);
+}
+a([1,2,3,4,5]);    
+/..................
+
+var a=(b)=>{
+    var c=b.split(" ");
+  for(var i=0;i<c.length;i++)
+  {
+     c[i]=c[i].charAt(0).toUpperCase()+c[i].slice(1);
+  }
+ 
+  console.log(c);
+}
+a("my name is sriram");    
