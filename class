@@ -1,0 +1,134 @@
+Task1:Personal details
+class person{
+    constructor(name,age,no,gender)
+    {
+        this.name=name;
+        this.age=age;
+        this.no=no;
+        this.gender=gender;
+    }
+    details()
+    {
+        console.log(this.name+","+this.age+","+this.no+","+this.gender)
+    }
+}
+/................
+Task2:uber
+let a=new person("sri","5","99524","male");
+a.details();
+
+class price{
+    constructor(dist,num,priceperkm)
+    {
+        this.dist=dist;
+        this.num=num;
+        this.price=priceperkm;
+    }
+    calc()
+    {
+        this.fare=this.dist*this.num*this.price;
+        console.log(this.fare);
+    }
+}
+let g=new price(100,2,1);
+g.calc();
+/..................
+Task3:
+1>...class movie{
+    constructor(title,studio,rating)
+    {
+        this.title=title;
+        this.studio=studio;
+        this.rating=rating;
+    }
+   
+}
+let a=new movie("Master","visival","PG");
+ console.log(a.title,a.studio,a.rating="PG");
+2>...
+class movie{
+    constructor(title,studio,rating)
+    {
+        this.title=title;
+        this.studio=studio;
+        this.rating=rating;
+    }
+   
+}
+let a=new movie("Master","visival");
+ console.log(a.title,a.studio,a.rating);
+3>...
+class movie{
+    constructor(title,studio,rating)
+    {
+        this.title=title;
+        this.studio=studio;
+        this.rating=rating;
+    }
+    rated()
+    {
+       for(var i=0;i<this.rating.length&&this.studio.length&&this.title.length;i++)
+        {
+          if(this.rating[i]=="PG-13")
+            {
+            console.log(this.title[i],this.studio[i],this.rating[i]);
+            }
+        }    
+    }
+   
+}
+let a=new movie(["master","bigil","gilli","thupaki","sura","aathi"],["sun","vjProduction","velinfotainment","vff","kopuram","sjprod"],["PG","PG","PG-14","PG-13","PG","PG-13"]);
+a.rated();
+4>...
+class movie{
+    constructor(title,studio,rating)
+    {
+        this.title=title;
+        this.studio=studio;
+        this.rating=rating;
+    }
+   
+}
+let a=new movie("Casino Royale","Eon Productions","PG-13");
+ console.log(a.title,a.studio,a.rating);
+/..................
+Task 4:
+1...
+class circle
+{
+    constructor(radius,color)
+    {
+        this.radius=radius;
+        this.color=color;
+    }
+    
+}
+let a= new circle(1,"red");
+console.log(a.radius,a.color);
+
+2>...
+class circle
+{
+    constructor(radius,color)
+    {
+        this.radius=radius;
+        this.color=color;
+    }
+    area()
+    {
+        const p=3.142857;
+        let area1=p*this.radius*this.radius;
+        console.log(area1);
+    }
+    circumference()
+   {
+      const p=3.142857;
+      let circ=2*p*this.radius;
+      console.log(circ);
+    
+   }
+}
+let a= new circle(1,"red");
+a.area();
+a.circumference();
+3>...
